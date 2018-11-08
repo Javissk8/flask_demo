@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<div class="row">
+	<div class="card" style="width: 18rem;">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">title: {{ note.title }}</li>
+    <li class="list-group-item">{{ note.description }}</li>
+    <li class="list-group-item">{{ note.author }}</li>
+  
+  </ul>
+	</div>
+
+	<br>
+
+	
+
+</div>
+
+{% endblock %}

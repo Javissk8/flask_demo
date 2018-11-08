@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+<h1>las notas</h1>
+
+<div class="row">
+	{% for note in notes %}
+	
+
+
+
+	<div class="card" style="width: 18rem;">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">{{ note.title }}</li>
+    <li class="list-group-item">{{ note.description }}</li>
+    <li class="list-group-item">{{ note.author }}</li>
+    <a href="/note/{{note.id}}" class="card-link">see more</a>
+  </ul>
+	</div>
+
+	<br>
+
+	{% endfor %}
+
+</div>
+
+{% endblock %}
+
