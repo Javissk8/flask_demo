@@ -12,9 +12,11 @@
 <body>
     {% include 'includes/_navbar.html' %}
     <div class="container">
-    {% block body %} 
+        {% include 'includes/_messages.html' %}
+
+        {% block body %} 
     
-    {% endblock %}
+        {% endblock %}
     </div>
 </body>
 

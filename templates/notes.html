@@ -11,19 +11,24 @@
 
 
 	<div class="card" style="width: 18rem;">
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">{{ note.title }}</li>
-    <li class="list-group-item">{{ note.description }}</li>
-    <li class="list-group-item">{{ note.author }}</li>
-    <a href="/note/{{note.id}}" class="card-link">see more</a>
-  </ul>
+		 <div class="card_body">
+		    <h5 class="card-title">{{ note.title }}</h5>
+		    <h5 class="card-title">{{ note.description }}</h5>
+		    <p>Date: {{ note.created_at }}</p>
+		    <a href="/note/{{note.id}}" class="card-link">see more</a>
+		    <a href="/edit-note/{{note.id}}" class="card-link">Edit</a>
+		    <form action="{{ url_for('delete_note', id=note.id)}}" method="POST">
+		    	<input type="submit" value="Delete" class="btn btn-danger">
+
+		    </form>
+		 </div>
 	</div>
 
-	<br>
 
 	{% endfor %}
 
-</div>
+
 
 {% endblock %}
 
+</div>

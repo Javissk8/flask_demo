@@ -2,20 +2,16 @@
 
 {% block body %}
 
+
+
 <div class="row">
-	<div class="card" style="width: 18rem;">
-  <ul class="list-group list-group-flush">
-    <li class="list-group-item">title: {{ note.title }}</li>
-    <li class="list-group-item">{{ note.description }}</li>
-    <li class="list-group-item">{{ note.author }}</li>
-  
-  </ul>
-	</div>
-
-	<br>
-
-	
-
+  <div class="card" style="width: 18rem;">
+    <div>
+      <h5 class="card-title">title: {{ note.title }}</h5>
+      <p class="list-group-item">{{ note.description }}</p>
+      <p class="list-group-item">Date:{{ note.created_at }}</p>
+    </div>
+  </div>
 </div>
 
 {% endblock %}
